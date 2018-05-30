@@ -1,0 +1,18 @@
+O-O-O-O-O-O-O O-O-O-O-O-O-O
+|\ \| | | |/| |\| | | |/ /|
+O-O O O O O O-O O O O O O-O
+|/ / /| |\ \| |/ /| |\ \ \|
+O-O-O-O-O-O-O O-O-O-O-O-O-O
+
+
+    def read_file(self):
+        f = open('test.txt')
+        i = -1
+        j = 0
+        for line in f:
+            if line[-1] == "\n":
+                line = line[0:-1]
+            i += 1
+            for j in range(len(line)):
+                self.str_map[i][j] = line[j]
+                j += 1
